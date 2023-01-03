@@ -1,0 +1,117 @@
+.grid {
+    height: 70vh;
+
+    .frame {
+        width: 85%;
+        padding: 100px;
+        display: flex;
+        gap: 10px;
+        height: 100%;
+
+        .left {
+            flex: 1;
+            height: 100%;
+
+
+        }
+
+        .right {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .top {
+                display: flex;
+                height: 50%;
+                gap: 10px;
+
+                .top1 {
+                    flex: 1;
+                    height: 100%;
+
+                }
+
+                .top2 {
+                    flex: 1;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                height: 50%;
+                gap: 10px;
+
+                .bottom1 {
+                    flex: 1;
+                    height: 100%;
+                }
+
+                .bottom2 {
+                    flex: 1;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .circleWrapper {
+        position: relative;
+
+        .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .big {
+            height: 180px;
+            width: 180px;
+            background-color: white;
+            position: absolute;
+            top: -350px;
+            left: 200px;
+
+            .mini1 {
+                height: 70px;
+                width: 70px;
+                background-color: olive;
+                transform: translateY(-20px);
+                color: white;
+            }
+
+            .mini2 {
+                height: 70px;
+                width: 70px;
+                background-color: yellow;
+                transform: translate(-22px, 22px);
+                position: relative;
+                z-index: 50;
+                color: white;
+                color: black;
+            }
+
+            .mini3 {
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                position: absolute;
+                top: 70px;
+                left: 60px;
+                background-color: white;
+
+            }
+        }
+    }
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

@@ -1,0 +1,127 @@
+.header {
+    height: 400px;
+    background-image: url(https://images.unsplash.com/photo-1524524692660-9838adb9c179?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .wrap {
+        display: flex;
+        gap: 10px;
+        position: relative;
+        top: -30px;
+    }
+
+    .menu {
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        gap: 20px;
+        justify-content: center;
+
+
+        .in,
+        .out {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 20px;
+            border-right: 1px solid black;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+
+        .filter {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-weight: 600;
+            padding: 10px 20px;
+
+
+            .adults,
+            .children,
+            .rooms {
+                cursor: pointer;
+
+                span {
+                    margin-right: 5px;
+                }
+            }
+
+            .dot {
+                height: 5px;
+                width: 5px;
+                border-radius: 50%;
+                background-color: black;
+            }
+        }
+
+    }
+
+    .btn {
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: yellow;
+        border: none;
+        font-weight: 600;
+    }
+
+    .filterMenu {
+        width: 230px;
+        position: absolute;
+        top: 48%;
+        left: 47%;
+
+        h1 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        background-color: white;
+        padding: 10px 30px;
+
+        .select {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        .caption {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
+    .doneBtn {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .done {
+            border: blue 1px solid;
+            padding: 5px 35px;
+            color: blue;
+            font-weight: 700;
+            border-radius: 10px;
+            background-color: white;
+            cursor: pointer;
+        }
+    }
+
+
+}
