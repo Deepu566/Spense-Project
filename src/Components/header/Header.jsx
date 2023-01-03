@@ -28,8 +28,8 @@ const Header = () => {
             <div className="wrap">
                 <div className="menu">
                     <div className="in"><DateRangeIcon />Check in
-                        <KeyboardArrowDownIcon /></div>
-                    <div className="out"><DateRangeIcon />Check Out <KeyboardArrowDownIcon /></div>
+                        <KeyboardArrowDownIcon className="icon" /></div>
+                    <div className="out"><DateRangeIcon className="icon" />Check Out <KeyboardArrowDownIcon className="icon" /></div>
 
                     <div className="filter">
                         <div className="adults">
@@ -44,8 +44,8 @@ const Header = () => {
                             <span className="room">{roomVal}</span>rooms
                         </div>
                         {!isFilterOpen ?
-                            <KeyboardArrowDownIcon onClick={() => setIsFilterOpen(true)} /> :
-                            <KeyboardArrowUpIcon onClick={() => setIsFilterOpen(false)} />
+                            <KeyboardArrowDownIcon className="icon" onClick={() => setIsFilterOpen(true)} /> :
+                            <KeyboardArrowUpIcon className="icon" onClick={() => setIsFilterOpen(false)} />
                         }
                     </div>
                 </div>
@@ -60,9 +60,9 @@ const Header = () => {
                             <div className='caption'>(Max: 8 total guests/room)</div>
                         </div>
                         <div className="right">
-                            <RemoveCircleOutlineIcon onClick={() => room !== 1 && setRoom(room - 1)} />
+                            <RemoveCircleOutlineIcon className="icon" onClick={() => room !== 1 && setRoom(room - 1)} />
                             <span>{room}</span>
-                            <AddCircleIcon onClick={() => setRoom(room + 1)} />
+                            <AddCircleIcon className="icon" onClick={() => setRoom(room + 1)} />
                         </div>
                     </div>
                     <div className="selectadults select">
@@ -71,9 +71,9 @@ const Header = () => {
                             <div className='caption'>(Max: 8 total guests/room)</div>
                         </div>
                         <div className="right">
-                            <RemoveCircleOutlineIcon onClick={() => adult !== 1 && setAdult(adult - 1)} />
+                            <RemoveCircleOutlineIcon className="icon" onClick={() => adult !== 1 && setAdult(adult - 1)} />
                             <span>{adult}</span>
-                            <AddCircleIcon onClick={() => setAdult(adult + 1)} />
+                            <AddCircleIcon className="icon" onClick={() => setAdult(adult + 1)} />
                         </div>
                     </div>
                     <div className="selectchild select">
@@ -82,9 +82,9 @@ const Header = () => {
                             <div className='caption'>(Max: 8 total guests/room)</div>
                         </div>
                         <div className="right">
-                            <RemoveCircleOutlineIcon onClick={() => child !== 0 && setChild(child - 1)} />
+                            <RemoveCircleOutlineIcon className="icon" onClick={() => child !== 0 && setChild(child - 1)} />
                             <span>{child}</span>
-                            <AddCircleIcon onClick={() => setChild(child + 1)} />
+                            <AddCircleIcon className="icon" onClick={() => setChild(child + 1)} />
                         </div>
                     </div>
                     <div className="doneBtn">

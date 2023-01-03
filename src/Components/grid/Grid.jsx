@@ -26,12 +26,10 @@ const Grid = () => {
                     </div>
                 </div>
             </div>
-            <div className="circleWrapper">
-                <div className="big circle">
-                    <div className="mini1 circle">V</div>
-                    <div className="mini2 circle">R</div>
-                    <div className="mini3 circle"></div>
-                </div>
+            <div className="big circle">
+                <div className="mini1 circle">V</div>
+                <div className="mini2 circle">R</div>
+                <div className="mini3 circle"></div>
             </div>
         </div>
     )
