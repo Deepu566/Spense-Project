@@ -2,10 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import "./Header.scss";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import DateRangeIcon from '@mui/icons-material/DateRange';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Calendar from 'react-calendar'
+import { dateFormatter } from '../../utils/dateFormatter'
 
 const Header = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false)
@@ -23,13 +25,78 @@ const Header = () => {
         SetChildVal(child);
         setIsFilterOpen(false)
     }
+
+    const [isCheckIn, setIsCheckIn] = useState(false)
+    const [isCheckOut, setIsCheckOut] = useState(false)
+
+    const [checkIn, setCheckIn] = useState('')
+    const [checkOut, setCheckOut] = useState('')
+
+    const handleDateChange = (value, type) => {
+        if (type === 'checkIn') {
+            setCheckIn(dateFormatter(value));
+            setIsCheckIn(false);
+            console.log('hello')
+        }
+        if (type === 'checkOut') {
+            console.log('first')
+            setCheckOut(dateFormatter(value));
+            setIsCheckOut(false);
+        }
+    }
+
     return (
         <div className='header'>
             <div className="wrap">
                 <div className="menu">
-                    <div className="in"><DateRangeIcon />Check in
-                        <KeyboardArrowDownIcon className="icon" /></div>
-                    <div className="out"><DateRangeIcon className="icon" />Check Out <KeyboardArrowDownIcon className="icon" /></div>
+                    <div className="in" onClick={() => setIsCheckIn(true)}>
+                        {
+                            checkIn ? (
+                                <>
+                                    <CalendarMonthIcon />
+                                    <label htmlFor="checkin">{checkIn}</label>
+                                    <KeyboardArrowDownIcon />
+                                </>
+                            ) : (
+                                <>
+                                    <CalendarMonthIcon />
+                                    <label htmlFor="checkin">Check In</label>
+                                    <KeyboardArrowDownIcon />
+                                </>
+                            )
+                        }
+                        {
+                            isCheckIn &&
+                            (
+                                <Calendar className="inCalendar" onChange={(value) => handleDateChange(value, 'checkIn')} />
+                            )
+                        }
+                    </div>
+                    <div className="out" onClick={() => setIsCheckOut(true)}>
+                        {
+                            checkOut ? (
+                                <>
+                                    <CalendarMonthIcon />
+                                    <label>{checkOut}</label>
+                                    <KeyboardArrowDownIcon />
+                                </>
+                            ) : (
+                                <>
+                                    <CalendarMonthIcon />
+                                    <label>Check Out</label>
+                                    <KeyboardArrowDownIcon />
+                                </>
+                            )
+                        }
+                        {
+                            isCheckOut &&
+                            (
+
+                                <Calendar className="inCalendar" onChange={(value) => handleDateChange(value, 'checkOut')} />
+                            )
+                        }
+                    </div>
+
 
                     <div className="filter">
                         <div className="adults">

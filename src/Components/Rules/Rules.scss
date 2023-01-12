@@ -5,5 +5,9 @@
     .rulesContainer {
         width: 85%;
         font-weight: 600;
+
+        .list {
+            display: flex;
+        }
     }
 }
