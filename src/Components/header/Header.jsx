@@ -124,29 +124,28 @@ const Header = () => {
                             )
                         }
                     </div>
-
-
-                    <div className="filter"
-                        onClick={() => {
+                    <div className="filter">
+                        <div className='filterWrapper' onClick={() => {
                             !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)
                             setIsCheckIn(false)
                             setIsCheckOut(false)
                         }}>
-                        <div className="adults">
-                            <span className="adult">{adultVal}</span>adults
+                            <div className="adults">
+                                <span className="adult">{adultVal}</span>adults
+                            </div>
+                            <span className='dot'></span>
+                            <div className="children">
+                                <span className="child">{childVal}</span>children
+                            </div>
+                            <span className='dot'></span>
+                            <div className="rooms">
+                                <span className="room">{roomVal}</span>rooms
+                            </div>
+                            {!isFilterOpen ?
+                                <KeyboardArrowDownIcon className="icon" /> :
+                                <KeyboardArrowUpIcon className="icon" />
+                            }
                         </div>
-                        <span className='dot'></span>
-                        <div className="children">
-                            <span className="child">{childVal}</span>children
-                        </div>
-                        <span className='dot'></span>
-                        <div className="rooms">
-                            <span className="room">{roomVal}</span>rooms
-                        </div>
-                        {!isFilterOpen ?
-                            <KeyboardArrowDownIcon className="icon" /> :
-                            <KeyboardArrowUpIcon className="icon" />
-                        }
 
                         {
                             isFilterOpen &&

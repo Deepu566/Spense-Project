@@ -63,13 +63,16 @@
         }
 
         .filter {
-            display: flex;
-            gap: 5px;
-            align-items: center;
             font-weight: 600;
             padding: 10px 20px;
             position: relative;
-            cursor: pointer;
+
+            .filterWrapper {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+            }
 
             .adults,
             .children,
