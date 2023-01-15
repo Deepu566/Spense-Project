@@ -23,7 +23,6 @@
         gap: 20px;
         justify-content: center;
 
-
         .in,
         .out {
             display: flex;
@@ -33,27 +32,34 @@
             margin-right: 5px;
             font-weight: 600;
             position: relative;
+            cursor: pointer;
 
-            input {
-                border: none;
-                border: 1px solid black;
-                border-radius: 20px;
-                outline: none;
-            }
-
-            .inCalendar {
+            .cal {
                 position: absolute;
-                width: 300px;
+                width: 280px;
+                height: 220px;
                 top: 50px;
                 left: 0;
                 background-color: white;
                 padding: 10px;
+                border-radius: 10px;
+
 
                 & button {
-                    border: none;
+                    border: 1px black solid;
                     background-color: white;
+                    margin: 0 5px 5px 0;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    // font-size: 12px;
+
                 }
             }
+
+            .outCalendar {
+                left: -50px;
+            }
+
         }
 
         .filter {
@@ -62,7 +68,8 @@
             align-items: center;
             font-weight: 600;
             padding: 10px 20px;
-
+            position: relative;
+            cursor: pointer;
 
             .adults,
             .children,
@@ -80,68 +87,69 @@
             }
         }
 
-    }
+        .filterMenu {
+            width: 230px;
+            position: absolute;
+            top: 45px;
+            left: -15px;
+            z-index: 50;
 
-    .btn {
-        padding: 15px 20px;
-        border-radius: 10px;
-        background-color: yellow;
-        border: none;
-        font-weight: 600;
-    }
+            h1 {
+                font-size: 16px;
+                font-weight: 500;
+            }
 
-    .filterMenu {
-        width: 230px;
-        position: absolute;
-        top: 48%;
-        left: 52%;
-        z-index: 50;
-
-        h1 {
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        background-color: white;
-        padding: 10px 30px;
-
-        .select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        h2 {
-            font-size: 16px;
-        }
-
-        .caption {
-            font-size: 12px;
-            font-weight: 600;
-        }
-    }
-
-    .doneBtn {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-
-        .done {
-            border: blue 1px solid;
-            padding: 5px 35px;
-            color: blue;
-            font-weight: 700;
-            border-radius: 10px;
             background-color: white;
-            cursor: pointer;
+            padding: 10px 30px;
+
+            .select {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .caption {
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .doneBtn {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+            .done {
+                border: blue 1px solid;
+                padding: 5px 35px;
+                color: blue;
+                font-weight: 700;
+                border-radius: 10px;
+                background-color: white;
+                cursor: pointer;
+            }
         }
     }
+
+}
+
+.btn {
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: yellow;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .icon {
