@@ -30,8 +30,8 @@
     }
 
     .map {
-        height: 100px;
-        width: 100px;
+        height: 200px;
+        width: 200px;
 
         iframe {
             height: 100%;
@@ -43,7 +43,7 @@
         ul {
             display: flex;
             gap: 50px;
-            font-weight: 600;
+            font-weight: 500;
         }
     }
 }
